@@ -8,7 +8,7 @@ const PersonDetail = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/persons/${id}`)
+        fetch(`${process.env.API_URL}/persons/${id}`)
             .then(response => response.json())
             .then(data => setPerson(data))
             .catch(error => {
