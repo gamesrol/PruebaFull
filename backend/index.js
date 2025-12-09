@@ -1,11 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
 // Variables de entorno
-const PORT = 3000;
-// const MONGODB_URI = 'mongodb://localhost:27017/dia25';
+const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // Routers
