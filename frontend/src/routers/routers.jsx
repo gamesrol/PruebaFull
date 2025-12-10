@@ -1,5 +1,5 @@
 import {createBrowserRouter} from 'react-router-dom'
-import Layout from '@/Layout/layout.jsx';
+import Layout from '@/Layout/Layout.jsx';
 import PersonsList from '@/components/Persons/PersonsList.jsx';
 import PersonDetail from '@/components/Persons/PersonDetail.jsx';
 import PersonCreate from '@/components/Persons/PersonCreate.jsx';
