@@ -8,7 +8,7 @@ const PersonDetail = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`${process.env.API_URL}/persons/${id}`)
+        fetch(`${process.env.VITE_API_URL}/persons/${id}`)
             .then(response => response.json())
             .then(data => setPerson(data))
             .catch(error => {

@@ -5,7 +5,7 @@ const PersonsList = () => {
     const [error, setError] = useState(null);
 
     const handleDelete = (id) => {
-        fetch(`${process.env.API_URL}/persons/${id}`, {
+        fetch(`${process.env.VITE_API_URL}/persons/${id}`, {
             method: 'DELETE'
         }).then(() => {
             setPersons(persons.filter(person => person._id !== id));
@@ -13,7 +13,7 @@ const PersonsList = () => {
     };
 
     useEffect(() => {
-        fetch(`${process.env.API_URL}/persons`)
+        fetch(`${process.env.VITE_API_URL}/persons`)
             .then(response => response.json())
             .then(data => setPersons(data))
             .catch(error => {

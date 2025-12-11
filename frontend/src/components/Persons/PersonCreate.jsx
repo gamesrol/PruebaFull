@@ -8,7 +8,7 @@ const PersonCreate = () => {
 
     useEffect(() => {
         if (id) {
-            fetch(`${process.env.API_URL}/persons/${id}`)
+            fetch(`${process.env.VITE_API_URL}/persons/${id}`)
                 .then(response => response.json())
                 .then(data => {
                     form.current.name.value = data.name;
@@ -29,7 +29,7 @@ const PersonCreate = () => {
             isTeacher: form.current.isTeacher.checked
         };
 
-        let url =  id ? `${process.env.API_URL}/persons/${id}` : `${process.env.API_URL}/persons`;
+        let url =  id ? `${process.env.VITE_API_URL}/persons/${id}` : `${process.env.VITE_API_URL}/persons`;
         let method =  id ? 'PUT' : 'POST';
         
         fetch(url, {
