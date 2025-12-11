@@ -13,7 +13,7 @@ const PersonsList = () => {
     };
 
     useEffect(() => {
-        fetch(`${process.env.VITE_API_URL}/persons`)
+        fetch(`${import.meta.env.VITE_API_URL}/persons`)
             .then(response => response.json())
             .then(data => setPersons(data))
             .catch(error => {
