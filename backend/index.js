@@ -19,6 +19,7 @@ const notFound = require('./middlewares/404');
 const internalServerError = require('./middlewares/500');
 const auth = require('./middlewares/auth');
 
+
 // Conexión a la base de datos
 mongoose.connect(MONGODB_URI)
 .then(() => console.log('Connected to MongoDB'))
